@@ -9,28 +9,36 @@
     <style>
         body {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
         h1, h2 {
             color: #3d1866;
+            margin: 0;
+            padding: 1em;
+        }
+
+        .paragraph1, .paragraph2, .paragraph3 {
+            padding: 2em;
+            margin: 0;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .paragraph1 {
             background-color: #F76900;
             color: #FFFFFF;
-            padding: 2em;
         }
 
         .paragraph2 {
             background-color: #000E54;
             color: #FFFFFF;
-            padding: 2em;
         }
 
         .paragraph3 {
             background-color: #ADB3B8;
             color: #000E54;
-            padding: 2em;
         }
     </style>
 
