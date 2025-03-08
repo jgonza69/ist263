@@ -1,6 +1,6 @@
 body {
-  background-color: #ffffff; /* changed to white for clear visibility */
-  color: #000000; /* text set to black for contrast */
+  background-color: #6f6363;
+  color: #ffffff; /* Changed text color to white for visibility */
   font-family: Arial, sans-serif;
   padding: 20px;
 }
@@ -29,10 +29,10 @@ header img {
 
 main {
   padding: 20px;
-  background-color: #ffffff; /* white background for clear readability */
+  background-color: #000000; /* Set main content background to black */
   border-radius: 10px;
   margin-bottom: 20px;
-  color: #000000; /* black text for visibility */
+  color: #ffffff; /* White text for visibility */
 }
 
 section {
@@ -56,7 +56,7 @@ footer {
   background-color: #f1f1f1;
   border-top: 1px solid #ccc;
   overflow: auto;
-  color: #000000; /* black text for readability */
+  color: #000000;
 }
 
 .footer-tagline {
@@ -73,23 +73,19 @@ footer {
 .article1 {
   flex: 2;
   order: 3;
-  background-color: #ffffff; /* white background */
+  background-color: #1c1717;
   border-radius: 10px;
   padding: 15px;
   margin: 10px;
-  color: #000000; /* black text for visibility */
 }
 
 .article2, .article3 {
   flex: 1;
   margin: 10px;
-  background-color: #ffffff; /* white background */
-  border-radius: 10px;
-  padding: 15px;
-  color: #000000; /* black text for visibility */
 }
 
 .part2 img {
   width: 100%;
   border-radius: 8px;
 }
+
