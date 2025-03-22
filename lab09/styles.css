@@ -1,6 +1,7 @@
+/* Base Styles */
 body {
   background-color: #6f6363;
-  color: #ffffff; /* Changed text color to white for visibility */
+  color: #ffffff;
   font-family: Arial, sans-serif;
   padding: 20px;
 }
@@ -29,10 +30,10 @@ header img {
 
 main {
   padding: 20px;
-  background-color: #000000; /* Set main content background to black */
+  background-color: #000000;
   border-radius: 10px;
   margin-bottom: 20px;
-  color: #ffffff; /* White text for visibility */
+  color: #ffffff;
 }
 
 section {
@@ -87,5 +88,75 @@ footer {
 .part2 img {
   width: 100%;
   border-radius: 8px;
+}
+
+/* LAB 09 ADDITIONS BELOW */
+
+/* Center heading and intro */
+h1 {
+  text-align: center;
+}
+
+p {
+  max-width: 75%;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+/* Flexbox for main skills layout */
+.flexbox2 {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.left-section {
+  flex: 3;
+}
+
+/* Icons and skill names */
+.flexbox1 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flexbox1 div {
+  text-align: center;
+}
+
+.flexbox1 img, .flexbox1 i {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Sidebar for Other Skills */
+aside {
+  flex: 1;
+  background-color: #f0f0f0;
+  color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+aside h2 {
+  margin-top: 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .flexbox2 {
+    flex-direction: column;
+  }
+
+  p {
+    max-width: 100%;
+  }
 }
 
