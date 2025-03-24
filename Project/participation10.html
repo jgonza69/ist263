@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewport Size Example</title>
+    <style>
+        .large-message, .small-message {
+            display: none;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+            font-size: 24px;
+        }
+
+        @media (min-width: 801px) {
+            .large-message {
+                display: block;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .small-message {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="large-message">
+    <p><strong>I'm large.</strong></p>
+    <ul>
+        <li>When the viewport is over 800 pixels.</li>
+    </ul>
+</div>
+
+<div class="small-message">
+    <p><strong>I'm small.</strong></p>
+    <ul>
+        <li>When the viewport is 800 pixels or less.</li>
+    </ul>
+</div>
+
+</body>
+</html>
