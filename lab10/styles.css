@@ -90,7 +90,6 @@ footer {
   border-radius: 8px;
 }
 
-
 h1 {
   text-align: center;
 }
@@ -130,7 +129,6 @@ p {
   margin-bottom: 10px;
 }
 
-
 aside {
   flex: 1;
   background-color: #f0f0f0;
@@ -147,7 +145,6 @@ ul {
   padding-left: 20px;
 }
 
-
 @media (max-width: 768px) {
   .flexbox2 {
     flex-direction: column;
@@ -163,5 +160,18 @@ ul {
   max-width: 100%;
   height: auto;
 }
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+}
+
+.col3, .col4 {
+  flex: 1;
+  min-width: 300px; 
+}
+
 
 
