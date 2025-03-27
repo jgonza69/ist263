@@ -90,9 +90,7 @@ footer {
   border-radius: 8px;
 }
 
-/* LAB 09 ADDITIONS BELOW */
 
-/* Center heading and intro */
 h1 {
   text-align: center;
 }
@@ -132,7 +130,7 @@ p {
   margin-bottom: 10px;
 }
 
-/* Sidebar for Other Skills */
+
 aside {
   flex: 1;
   background-color: #f0f0f0;
@@ -149,7 +147,7 @@ ul {
   padding-left: 20px;
 }
 
-/* Responsive layout */
+
 @media (max-width: 768px) {
   .flexbox2 {
     flex-direction: column;
@@ -159,4 +157,11 @@ ul {
     max-width: 100%;
   }
 }
+
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
 
