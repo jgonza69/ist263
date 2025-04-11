@@ -1,28 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Participation 12</title>
-    <style>
-        #school {
-            font-size: 24px;
-            cursor: pointer;
-            color: black;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Participation 12</title>
 </head>
 <body>
 
-    <div id="school">Syracuse University</div>
+  <div id="school" onclick="changeText()">Syracuse University</div>
 
-    <script>
-        const schoolDiv = document.getElementById("school");
-
-        schoolDiv.addEventListener("click", function() {
-            schoolDiv.textContent = "Orange Nation";
-            schoolDiv.style.color = "orange";
-        });
-    </script>
+  <script>
+    function changeText() {
+      document.getElementById("school").innerHTML = "Orange Nation";
+      document.getElementById("school").style.color = "orange";
+    }
+  </script>
 
 </body>
 </html>
+
