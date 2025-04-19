@@ -205,6 +205,14 @@ nav span {
 .skip-link:focus {
   top: 0;
 }
+main a {
+  color: #33ccff; /* light blue for good contrast on black */
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
 
 
 
