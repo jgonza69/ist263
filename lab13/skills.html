@@ -1,124 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills</title>
-    <link rel="stylesheet" href="styles.css">
-    
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 30px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
 
-        h1 {
-            text-align: center;
-        }
+    h1 {
+      text-align: center;
+    }
 
-        p {
-            max-width: 75%;
-            margin: 0 auto 20px auto;
-            text-align: center;
-        }
+    p {
+      max-width: 75%;
+      margin: 0 auto 20px auto;
+      text-align: center;
+    }
 
-        .flexbox2 {
-            display: flex;
-            gap: 20px;
-        }
+    .flexbox2 {
+      display: flex;
+      gap: 20px;
+    }
 
-        .left-section {
-            flex: 3;
-        }
+    .left-section {
+      flex: 3;
+    }
 
-        .flexbox1 {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+    .flexbox1 {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-        .flexbox1 div {
-            text-align: center;
-        }
+    .flexbox1 div {
+      text-align: center;
+    }
 
-        .flexbox1 img, .flexbox1 i {
-            width: 60px;
-            height: auto;
-            margin-bottom: 10px;
-        }
+    .flexbox1 img, .flexbox1 i {
+      width: 60px;
+      height: auto;
+      margin-bottom: 10px;
+    }
 
-        aside {
-            flex: 1;
-            background-color: #f0f0f0;
-            padding: 20px;
-            border-radius: 10px;
-        }
+    aside {
+      flex: 1;
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+    }
 
-        aside h2 {
-            margin-top: 0;
-        }
+    aside h2 {
+      margin-top: 0;
+    }
 
-        ul {
-            padding-left: 20px;
-        }
+    ul {
+      padding-left: 20px;
+    }
 
-        @media (max-width: 768px) {
-            .flexbox2 {
-                flex-direction: column;
-            }
+    @media (max-width: 768px) {
+      .flexbox2 {
+        flex-direction: column;
+      }
 
-            p {
-                max-width: 100%;
-            }
-        }
-    </style>
+      p {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    
-    <nav>
-        <a href="index.html">Home</a> <span>|</span>
-        <a href="skills.html">Skills</a> <span>|</span>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <!-- Skip link for accessibility -->
+  <a href="#maincontent" class="skip-link">Skip to content</a>
 
+  <nav>
+    <a href="index.html">Home</a> <span>|</span>
+    <a href="skills.html">Skills</a> <span>|</span>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main id="maincontent">
     <h1>My Technical Skills</h1>
     <p>This page highlights my most important technical skills using icons and lists other relevant tools and experience in a sidebar.</p>
 
     <div class="flexbox2">
-        <div class="left-section">
-            <div class="flexbox1">
-                <div>
-                    <i class="fab fa-html5"></i><br>HTML
-                </div>
-                <div>
-                    <i class="fab fa-css3-alt"></i><br>CSS
-                </div>
-                <div>
-                    <i class="fab fa-js-square"></i><br>JavaScript
-                </div>
-                <div>
-                    <i class="fab fa-python"></i><br>Python
-                </div>
-                <div>
-                    <i class="fab fa-github"></i><br>GitHub
-                </div>
-            </div>
+      <div class="left-section">
+        <div class="flexbox1">
+          <div>
+            <i class="fab fa-html5"></i><br>HTML
+          </div>
+          <div>
+            <i class="fab fa-css3-alt"></i><br>CSS
+          </div>
+          <div>
+            <i class="fab fa-js-square"></i><br>JavaScript
+          </div>
+          <div>
+            <i class="fab fa-python"></i><br>Python
+          </div>
+          <div>
+            <i class="fab fa-github"></i><br>GitHub
+          </div>
         </div>
+      </div>
 
-        <aside>
-            <h2>Other Skills</h2>
-            <ul>
-                <li>SQL</li>
-                <li>Java</li>
-                <li>Excel</li>
-                <li>Spreadsheets</li>
-                <li>Soccer Refereeing</li>
-            </ul>
-        </aside>
+      <aside>
+        <h2>Other Skills</h2>
+        <ul>
+          <li>SQL</li>
+          <li>Java</li>
+          <li>Excel</li>
+          <li>Spreadsheets</li>
+          <li>Soccer Refereeing</li>
+        </ul>
+      </aside>
     </div>
+  </main>
 
 </body>
 </html>
+
