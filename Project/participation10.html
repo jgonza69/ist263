@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viewport Size Example</title>
-    <style>
-        .large-message, .small-message {
-            display: none;
-            font-family: Arial, sans-serif;
-            margin-top: 50px;
-            font-size: 24px;
-        }
-
-        @media (min-width: 801px) {
-            .large-message {
-                display: block;
-            }
-        }
-
-        @media (max-width: 800px) {
-            .small-message {
-                display: block;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Inline vs Block vs Inline-Block</title>
+  <style>
+    .box {
+      background-color: lightblue;
+      border: 2px solid blue;
+      margin: 5px;
+      padding: 10px;
+    }
+    .block {
+      display: block;
+      width: 200px;
+    }
+    .inline {
+      display: inline;
+      width: 200px; /* This will NOT apply */
+    }
+    .inline-block {
+      display: inline-block;
+      width: 200px;
+    }
+  </style>
 </head>
 <body>
 
-<div class="large-message">
-    <p><strong>I'm large.</strong></p>
-    <ul>
-        <li>When the viewport is over 800 pixels.</li>
-    </ul>
-</div>
+  <h2>Block Elements</h2>
+  <div class="box block">Block 1</div>
+  <div class="box block">Block 2</div>
 
-<div class="small-message">
-    <p><strong>I'm small.</strong></p>
-    <ul>
-        <li>When the viewport is 800 pixels or less.</li>
-    </ul>
-</div>
+  <h2>Inline Elements</h2>
+  <span class="box inline">Inline 1</span>
+  <span class="box inline">Inline 2</span>
+
+  <h2>Inline-Block Elements</h2>
+  <div class="box inline-block">Inline-Block 1</div>
+  <div class="box inline-block">Inline-Block 2</div>
 
 </body>
 </html>
+
