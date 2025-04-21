@@ -23,6 +23,10 @@
             left: 50%;
             margin-left: -150px;
             display: none;
+        #close {
+           text-align: right;
+           cursor: pointer; 
+        }
 
 
 
@@ -53,6 +57,7 @@
 
         <!-- make a subscribe form here -->
         <div id="modal">
+            <p id="close" onclick="closeModal();">x</p>
             <form>
                 <label for="email">Enter your email</label><br>
                 <input type="text" id="email" name="email"><br>
