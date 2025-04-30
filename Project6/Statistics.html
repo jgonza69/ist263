@@ -5,6 +5,56 @@
     <title>El Clásico - Statistics & Timeline</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .timeline-entry {
+            margin-bottom: 1.5em;
+        }
+        .details {
+            display: none;
+            margin-top: 0.5em;
+        }
+        .toggle-btn {
+            margin-top: 0.5em;
+            padding: 0.3em 0.8em;
+            font-size: 0.9em;
+            background-color: #444;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .toggle-btn:hover {
+            background-color: #666;
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+        }
+
+        .content {
+            flex: 1 1 65%;
+        }
+
+        .sidebar {
+            flex: 1 1 30%;
+            background-color: #f2f2f2;
+            padding: 1em;
+            border-left: 3px solid #4a90e2;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body class="stats">
@@ -17,55 +67,79 @@
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Key Facts & Statistics</h2>
-            <ul>
-                <li>Total Official Matches: 250+</li>
-                <li>All-Time Top Scorer: Lionel Messi (26 goals)</li>
-                <li>Biggest Victory: Real Madrid 11-1 Barcelona (1943)</li>
-                <li>Most Wins: Real Madrid leads, but rivalry remains close!</li>
-            </ul>
-        </section>
+    <main class="main-content">
+        <div class="content">
+            <section>
+                <h2>Key Facts & Statistics</h2>
+                <ul>
+                    <li>Total Official Matches: 250+</li>
+                    <li>All-Time Top Scorer: Lionel Messi (26 goals)</li>
+                    <li>Biggest Victory: Real Madrid 11-1 Barcelona (1943)</li>
+                    <li>Most Wins: Real Madrid leads, but rivalry remains close!</li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>Interactive Timeline of El Clásico</h2>
-            <ul>
-                <li>
-                    <strong>November 19, 2005:</strong> Ronaldinho’s mesmerizing dribbles earned him a standing ovation from Madrid fans.
-                    <br>
-                    <a href="https://www.youtube.com/watch?v=i2kdIbn0Uoc">Watch highlights</a>
-                    <br>
-                    <img src="https://jgonza69.github.io/ist263/Project5/Joya.jpeg" alt="Ronaldinho ovation" width="500">
-                </li>
+            <section>
+                <h2>Interactive Timeline of El Clásico</h2>
 
-                <li>
-                    <strong>April 23, 2017:</strong> Messi’s last-second winner became one of the most iconic celebrations in soccer history.
-                    <br>
-                    <a href="https://www.youtube.com/watch?v=hLVZBN3PH6U">Watch highlights</a>
-                    <br>
-                    <img src="https://jgonza69.github.io/ist263/Project5/Messi2.jpeg" alt="Messi celebration" width="500">
-                </li>
+                <div class="timeline-entry">
+                    <strong>November 19, 2005:</strong> Ronaldinho earns standing ovation from Madrid fans.
+                    <button class="toggle-btn" onclick="toggleDetails('event1')">Show Details</button>
+                    <div class="details" id="event1">
+                        <a href="https://www.youtube.com/watch?v=i2kdIbn0Uoc">Watch highlights</a><br>
+                        <img src="https://jgonza69.github.io/ist263/Project5/Joya.jpeg" alt="Ronaldinho ovation" width="500">
+                    </div>
+                </div>
 
-                <li>
-                    <strong>March 2, 2019:</strong> Barcelona achieved four consecutive wins at the Bernabéu, a historic feat.
-                    <br>
-                    <a href="https://www.youtube.com/watch?v=1wMHHbBg9wo">Watch highlights</a>
-                    <br>
-                    <img src="https://jgonza69.github.io/ist263/Project5/Barca.jpeg" alt="Barcelona celebration" width="500">
-                </li>
+                <div class="timeline-entry">
+                    <strong>April 23, 2017:</strong> Messi’s last-second winner stuns the crowd.
+                    <button class="toggle-btn" onclick="toggleDetails('event2')">Show Details</button>
+                    <div class="details" id="event2">
+                        <a href="https://www.youtube.com/watch?v=hLVZBN3PH6U">Watch highlights</a><br>
+                        <img src="https://jgonza69.github.io/ist263/Project5/Messi2.jpeg" alt="Messi celebration" width="500">
+                    </div>
+                </div>
 
-                <li>
-                    <strong>General El Clásico Highlights:</strong>
-                    <br>
-                    <a href="https://www.youtube.com/watch?v=eY0N3J9_PdQ">More iconic El Clásico moments</a>
-                </li>
-            </ul>
-        </section>
+                <div class="timeline-entry">
+                    <strong>March 2, 2019:</strong> Barcelona achieves four straight wins at the Bernabéu.
+                    <button class="toggle-btn" onclick="toggleDetails('event3')">Show Details</button>
+                    <div class="details" id="event3">
+                        <a href="https://www.youtube.com/watch?v=1wMHHbBg9wo">Watch highlights</a><br>
+                        <img src="https://jgonza69.github.io/ist263/Project5/Barca.jpeg" alt="Barcelona celebration" width="500">
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <strong>More El Clásico Moments:</strong>
+                    <button class="toggle-btn" onclick="toggleDetails('event4')">Show Details</button>
+                    <div class="details" id="event4">
+                        <a href="https://www.youtube.com/watch?v=eY0N3J9_PdQ">More iconic El Clásico moments</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <aside class="sidebar">
+            <h3>Latest News from ESPN</h3>
+            <iframe src="https://www.espn.com" width="100%" height="500" style="border: none;"></iframe>
+        </aside>
     </main>
 
     <footer>
         <p>Project created by Jared Gonzalez</p>
     </footer>
+
+    <script>
+        function toggleDetails(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
+
+
