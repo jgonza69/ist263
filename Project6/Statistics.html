@@ -5,8 +5,31 @@
     <title>El Clásico - Statistics & Timeline</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
+
     <style>
-        /* Timeline styles */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            margin-top: 1.5em;
+        }
+
+        .content {
+            flex: 1 1 65%;
+        }
+
+        .sidebar {
+            flex: 1 1 30%;
+            background-color: #f9f9f9;
+            padding: 1em;
+            border-left: 4px solid #4a90e2;
+            border-radius: 6px;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+        }
+
         .accordion {
             background-color: #eee;
             color: #000;
@@ -15,7 +38,6 @@
             width: 100%;
             border: none;
             text-align: left;
-            outline: none;
             font-size: 1.1em;
             transition: background-color 0.3s ease;
             margin-top: 1em;
@@ -35,25 +57,26 @@
             margin-bottom: 1em;
         }
 
-        .main-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2em;
-        }
-
-        .content {
-            flex: 1 1 65%;
-        }
-
-        .sidebar {
-            flex: 1 1 30%;
-            background-color: #f9f9f9;
+        .fact-box {
+            margin-top: 1em;
+            background-color: #fff;
+            border: 1px solid #ddd;
             padding: 1em;
-            border-left: 3px solid #4a90e2;
+            border-radius: 5px;
         }
 
-        .sidebar h3 {
-            margin-top: 0;
+        .fact-btn {
+            margin-top: 1em;
+            padding: 0.5em 1em;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .fact-btn:hover {
+            background-color: #4a90e2;
         }
 
         @media (max-width: 768px) {
@@ -66,7 +89,7 @@
 
 <body class="stats">
     <header>
-        <h1>Iconic Statistics and Timeline</h1>
+        <h1>El Clásico - Statistics & Timeline</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="Statistics.html">Statistics & Timeline</a>
@@ -75,6 +98,7 @@
     </header>
 
     <main class="main-content">
+        <!-- MAIN CONTENT -->
         <div class="content">
             <section>
                 <h2>Key Facts & Statistics</h2>
@@ -91,37 +115,34 @@
 
                 <button class="accordion">November 19, 2005 - Ronaldinho’s Ovation</button>
                 <div class="panel">
-                    <p>Ronaldinho’s mesmerizing dribbles earned him a standing ovation from Madrid fans.</p>
+                    <p>Ronaldinho received a standing ovation from Real Madrid fans after an incredible performance.</p>
                     <a href="https://www.youtube.com/watch?v=i2kdIbn0Uoc" target="_blank">Watch highlights</a>
                     <img src="https://jgonza69.github.io/ist263/Project5/Joya.jpeg" alt="Ronaldinho ovation" width="100%">
                 </div>
 
-                <button class="accordion">April 23, 2017 - Messi's Last-Second Winner</button>
+                <button class="accordion">April 23, 2017 - Messi’s Last-Second Winner</button>
                 <div class="panel">
-                    <p>Messi’s last-second winner became one of the most iconic celebrations in soccer history.</p>
+                    <p>Messi scored a last-minute goal and held up his shirt to the crowd at the Bernabéu.</p>
                     <a href="https://www.youtube.com/watch?v=hLVZBN3PH6U" target="_blank">Watch highlights</a>
                     <img src="https://jgonza69.github.io/ist263/Project5/Messi2.jpeg" alt="Messi celebration" width="100%">
                 </div>
 
-                <button class="accordion">March 2, 2019 - Barcelona's Four Straight Wins</button>
+                <button class="accordion">March 2, 2019 - Barcelona's 4th Win in a Row</button>
                 <div class="panel">
-                    <p>Barcelona achieved four consecutive wins at the Bernabéu, a historic feat.</p>
+                    <p>Barcelona achieved four consecutive wins at the Bernabéu.</p>
                     <a href="https://www.youtube.com/watch?v=1wMHHbBg9wo" target="_blank">Watch highlights</a>
                     <img src="https://jgonza69.github.io/ist263/Project5/Barca.jpeg" alt="Barcelona celebration" width="100%">
-                </div>
-
-                <button class="accordion">More El Clásico Moments</button>
-                <div class="panel">
-                    <p>Check out a collection of iconic El Clásico moments over the years.</p>
-                    <a href="https://www.youtube.com/watch?v=eY0N3J9_PdQ" target="_blank">Watch more</a>
                 </div>
             </section>
         </div>
 
+        <!-- SIDEBAR -->
         <aside class="sidebar">
-            <h3>Latest ESPN Headlines</h3>
-            <iframe src="https://rss.app/embed/v1/wall/7sKjBWHe1G8n2bzL" width="100%" height="500" frameborder="0"></iframe>
-            <p style="font-size: 0.8em;">Powered by <a href="https://rss.app" target="_blank">rss.app</a></p>
+            <h3>Did You Know?</h3>
+            <div class="fact-box" id="factBox">
+                Click the button to reveal a random El Clásico fact!
+            </div>
+            <button class="fact-btn" onclick="showRandomFact()">Show Fact</button>
         </aside>
     </main>
 
@@ -130,18 +151,35 @@
     </footer>
 
     <script>
-        // Accordion logic for show/hide panels
+        // Accordion toggle
         const acc = document.getElementsByClassName("accordion");
         for (let i = 0; i < acc.length; i++) {
             acc[i].addEventListener("click", function () {
                 this.classList.toggle("active");
-                let panel = this.nextElementSibling;
+                const panel = this.nextElementSibling;
                 panel.style.display = panel.style.display === "block" ? "none" : "block";
             });
+        }
+
+        // Random El Clásico facts
+        const facts = [
+            "El Clásico is one of the most watched sporting events worldwide.",
+            "Messi has the most goals in El Clásico history (26).",
+            "Barcelona and Real Madrid have met in over 250 official matches.",
+            "The first El Clásico was played in 1902.",
+            "El Clásico is more than football — it reflects politics and identity.",
+            "In 1943, Madrid beat Barcelona 11-1 in the biggest ever win.",
+            "Sergio Ramos holds the record for most cards in El Clásico history."
+        ];
+
+        function showRandomFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById("factBox").innerText = facts[randomIndex];
         }
     </script>
 </body>
 </html>
+
 
 
 
