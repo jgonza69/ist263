@@ -5,7 +5,51 @@
     <title>El Clásico - Cultural Impact & Personal Experience</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            margin-top: 1.5em;
+        }
+
+        .content {
+            flex: 1 1 65%;
+        }
+
+        .sidebar {
+            flex: 1 1 30%;
+            background-color: #f9f9f9;
+            padding: 1em;
+            border-left: 4px solid #f39c12;
+            border-radius: 6px;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+        }
+
+        .highlight {
+            background-color: #fffbe6;
+            padding: 0.5em;
+            border-left: 4px solid #f39c12;
+            margin-bottom: 1em;
+        }
+
+        img {
+            width: 100%;
+            margin-top: 1em;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
+
 <body class="impact">
     <header>
         <h1>Cultural Impact & My Personal Experience</h1>
@@ -16,33 +60,47 @@
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>El Clásico: More Than Just a Game</h2>
-            <p>El Clásico represents pride, identity, and history.</p>
-            <ul>
-                <li><strong>FC Barcelona:</strong> Strongly linked to Catalan identity.</li>
-                <li><strong>Real Madrid:</strong> Spain’s most successful club and global football icon.</li>
-            </ul>
-            <p>The rivalry significantly influences pop culture, media, and the global economy.</p>
-        </section>
+    <main class="main-content">
+        <!-- MAIN CONTENT -->
+        <div class="content">
+            <section>
+                <h2>Cultural Impact</h2>
+                <div class="highlight">
+                    El Clásico represents pride, politics, and identity — not just football.
+                </div>
+                <p><strong>FC Barcelona</strong> has deep ties to Catalan culture and identity. For many fans, the club stands for independence, resistance, and pride in their heritage.</p>
+                <p><strong>Real Madrid</strong> is often seen as a symbol of Spanish unity and power, with strong historic ties to the central government.</p>
+                <p>This rivalry spills into music, film, social media, and global marketing. From Messi posters in Argentina to Madrid jerseys in Japan, the impact is massive.</p>
+            </section>
 
-        <section>
-            <h2>My Personal Experience</h2>
-            <p>Attending El Clásico at the Santiago Bernabéu was unforgettable:</p>
-            <ul>
-                <li><strong>Match Day Atmosphere:</strong> Stadium packed with passionate fans.</li>
-                <li><strong>Energy of the Crowd:</strong> Unmatched excitement and intensity.</li>
-                <li><strong>Heartbreak:</strong> Witnessing Real Madrid lose 4-0 at home.</li>
-            </ul>
+            <section>
+                <h2>My Personal Experience</h2>
+                <div class="highlight">
+                    Attending El Clásico was one of the most exciting moments of my life.
+                </div>
+                <p>When I visited the Santiago Bernabéu, the energy was incredible. The crowd was loud, passionate, and dressed in full team colors.</p>
+                <ul>
+                    <li><strong>Match Day:</strong> The stadium was packed hours before kickoff.</li>
+                    <li><strong>The Fans:</strong> Chants, songs, and banners were everywhere.</li>
+                    <li><strong>The Result:</strong> Sadly, Madrid lost 4-0, but the experience was unforgettable.</li>
+                </ul>
 
-            <h3>Photos from my Experience</h3>
-            <img src="https://jgonza69.github.io/ist263/Project5/Spain1.jpeg" alt="Personal Experience 1" width="500">
-            <br>
-            <img src="https://jgonza69.github.io/ist263/Project5/Spain2.jpeg" alt="Personal Experience 2" width="500">
-            <br>
-            <img src="https://jgonza69.github.io/ist263/Project5/Rayo.jpeg" alt="Personal Experience 3" width="500">
-        </section>
+                <img src="https://jgonza69.github.io/ist263/Project5/Spain1.jpeg" alt="Experience 1">
+                <img src="https://jgonza69.github.io/ist263/Project5/Spain2.jpeg" alt="Experience 2">
+                <img src="https://jgonza69.github.io/ist263/Project5/Rayo.jpeg" alt="Experience 3">
+            </section>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h3>Quote from the Stands</h3>
+            <blockquote>
+                "In El Clásico, it's not just about goals — it's about glory, identity, and emotion."
+            </blockquote>
+
+            <h3>Fun Fact</h3>
+            <p>Some El Clásico matches have drawn over 100,000 fans — that’s more than most Super Bowls!</p>
+        </aside>
     </main>
 
     <footer>
@@ -50,4 +108,5 @@
     </footer>
 </body>
 </html>
+
 
