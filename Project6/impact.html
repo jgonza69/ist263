@@ -6,45 +6,100 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
     <style>
+        body {
+            background-color: #f4f4f4;
+        }
+
         .main-content {
             display: flex;
             flex-wrap: wrap;
             gap: 2em;
-            margin-top: 1.5em;
+            padding: 2em;
+            animation: fadeIn 1.2s ease;
         }
 
         .content {
             flex: 1 1 65%;
+            background-color: #ffffff;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         .sidebar {
             flex: 1 1 30%;
-            background-color: #f9f9f9;
-            padding: 1em;
-            border-left: 4px solid #f39c12;
-            border-radius: 6px;
-        }
-
-        .sidebar h3 {
-            margin-top: 0;
+            background-color: #fffef4;
+            padding: 1.5em;
+            border-left: 5px solid #f39c12;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
         .highlight {
             background-color: #fffbe6;
-            padding: 0.5em;
-            border-left: 4px solid #f39c12;
-            margin-bottom: 1em;
+            border-left: 5px solid #f39c12;
+            padding: 1em;
+            margin: 1.5em 0;
+            font-style: italic;
+            font-size: 1.1em;
         }
 
         img {
             width: 100%;
             margin-top: 1em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+        }
+
+        .quote-block {
+            font-size: 1.1em;
+            margin-top: 1em;
+            padding: 1em;
+            background-color: #fff4cc;
+            border-left: 5px solid #f39c12;
             border-radius: 6px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 1em;
+            margin-top: 1em;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            border-radius: 8px;
+        }
+
+        /* Lightbox modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @media (max-width: 768px) {
             .main-content {
                 flex-direction: column;
+                padding: 1em;
             }
         }
     </style>
@@ -61,52 +116,73 @@
     </header>
 
     <main class="main-content">
-        <!-- MAIN CONTENT -->
+        <!-- LEFT MAIN CONTENT -->
         <div class="content">
             <section>
-                <h2>Cultural Impact</h2>
+                <h2>The Cultural Impact of El Clásico</h2>
+                <p>El Clásico is more than just a football match — it's a political, social, and emotional clash between two distinct identities.</p>
                 <div class="highlight">
-                    El Clásico represents pride, politics, and identity — not just football.
+                    Barcelona is seen as a symbol of Catalan pride and independence, while Madrid is tied to Spain’s centralized power.
                 </div>
-                <p><strong>FC Barcelona</strong> has deep ties to Catalan culture and identity. For many fans, the club stands for independence, resistance, and pride in their heritage.</p>
-                <p><strong>Real Madrid</strong> is often seen as a symbol of Spanish unity and power, with strong historic ties to the central government.</p>
-                <p>This rivalry spills into music, film, social media, and global marketing. From Messi posters in Argentina to Madrid jerseys in Japan, the impact is massive.</p>
+                <p>The rivalry echoes through history: civil wars, dictatorships, and regional battles for autonomy. That’s what makes this match so intense — it's about something bigger than sport.</p>
+                <p>Globally, El Clásico has become a brand. Players like Messi and Ronaldo have turned it into the most-watched rivalry in sports, inspiring documentaries, shirts, songs, and even street murals across the world.</p>
             </section>
 
             <section>
-                <h2>My Personal Experience</h2>
-                <div class="highlight">
-                    Attending El Clásico was one of the most exciting moments of my life.
+                <h2>My Personal El Clásico Experience</h2>
+                <div class="quote-block">
+                    “It was loud. It was emotional. It was unforgettable.”  
                 </div>
-                <p>When I visited the Santiago Bernabéu, the energy was incredible. The crowd was loud, passionate, and dressed in full team colors.</p>
+                <p>When I attended El Clásico at the Santiago Bernabéu, I felt like I was inside a movie. There were flags waving, drums pounding, and chants echoing throughout the city streets.</p>
                 <ul>
-                    <li><strong>Match Day:</strong> The stadium was packed hours before kickoff.</li>
-                    <li><strong>The Fans:</strong> Chants, songs, and banners were everywhere.</li>
-                    <li><strong>The Result:</strong> Sadly, Madrid lost 4-0, but the experience was unforgettable.</li>
+                    <li><strong>Atmosphere:</strong> Even hours before the match, fans flooded the streets.</li>
+                    <li><strong>The Match:</strong> I watched Real Madrid lose 4-0 — a shocking result.</li>
+                    <li><strong>Emotions:</strong> Even in defeat, the Madrid crowd showed passion and pride.</li>
                 </ul>
 
-                <img src="https://jgonza69.github.io/ist263/Project5/Spain1.jpeg" alt="Experience 1">
-                <img src="https://jgonza69.github.io/ist263/Project5/Spain2.jpeg" alt="Experience 2">
-                <img src="https://jgonza69.github.io/ist263/Project5/Rayo.jpeg" alt="Experience 3">
+                <img src="https://jgonza69.github.io/ist263/Project5/Spain1.jpeg" alt="Personal Experience 1" onclick="openModal(this)">
+                <img src="https://jgonza69.github.io/ist263/Project5/Spain2.jpeg" alt="Personal Experience 2" onclick="openModal(this)">
+                <img src="https://jgonza69.github.io/ist263/Project5/Rayo.jpeg" alt="Personal Experience 3" onclick="openModal(this)">
             </section>
         </div>
 
-        <!-- SIDEBAR -->
+        <!-- RIGHT SIDEBAR -->
         <aside class="sidebar">
-            <h3>Quote from the Stands</h3>
-            <blockquote>
-                "In El Clásico, it's not just about goals — it's about glory, identity, and emotion."
-            </blockquote>
+            <h3>From the Crowd</h3>
+            <p>"They say you haven’t seen passion until you’ve seen a Clásico in person."</p>
 
-            <h3>Fun Fact</h3>
-            <p>Some El Clásico matches have drawn over 100,000 fans — that’s more than most Super Bowls!</p>
+            <div class="card">
+                <h4>Featured Player</h4>
+                <p><strong>Lionel Messi</strong></p>
+                <p>Most goals in El Clásico history (26)</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Lionel_Messi_20180626.jpg" alt="Messi" style="width: 100%; border-radius: 8px;">
+            </div>
         </aside>
     </main>
 
     <footer>
         <p>Project created by Jared Gonzalez</p>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="modal" onclick="closeModal()">
+        <img id="lightboxImage" src="">
+    </div>
+
+    <script>
+        function openModal(img) {
+            const modal = document.getElementById("lightboxModal");
+            const modalImg = document.getElementById("lightboxImage");
+            modalImg.src = img.src;
+            modal.style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("lightboxModal").style.display = "none";
+        }
+    </script>
 </body>
 </html>
+
 
 
