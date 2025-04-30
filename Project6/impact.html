@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background-color: #f7f7f7;
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
         }
 
         .layout {
@@ -26,6 +27,7 @@
         .sidebar-left h3 {
             font-size: 1em;
             margin-bottom: 1em;
+            color: #333;
         }
 
         .sidebar-left ul {
@@ -36,11 +38,12 @@
         .sidebar-left li {
             padding: 0.5em 0;
             border-bottom: 1px solid #eee;
+            color: #222;
         }
 
         .main-content {
             flex: 1 1 60%;
-            background-color: #fff;
+            background-color: #ffffff;
             padding: 2em;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.06);
@@ -48,15 +51,15 @@
 
         .sidebar-right {
             flex: 1 1 20%;
-            background-color: #fff;
+            background-color: #ffffff;
             padding: 1em;
             border-left: 1px solid #ddd;
         }
 
         .highlight {
-            background-color: #fffbe6;
+            background-color: #fff3e0;
             padding: 1em;
-            border-left: 4px solid #f39c12;
+            border-left: 4px solid #ff9800;
             margin: 1.5em 0;
             font-style: italic;
         }
@@ -76,9 +79,35 @@
         .quote-block {
             margin: 1.5em 0;
             padding: 1em;
-            background-color: #fff4cc;
-            border-left: 5px solid #f39c12;
+            background-color: #e3f2fd;
+            border-left: 5px solid #2196f3;
             border-radius: 6px;
+        }
+
+        /* Trending topic cards */
+        .trending-card {
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            padding: 1em;
+            margin-bottom: 1em;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .trending-card:hover {
+            background-color: #e0f7fa;
+            transform: scale(1.02);
+            cursor: pointer;
+        }
+
+        .trending-card h4 {
+            margin: 0 0 0.5em;
+            color: #0d47a1;
+        }
+
+        .trending-card p {
+            font-size: 0.9em;
+            color: #444;
         }
 
         @media (max-width: 768px) {
@@ -96,17 +125,17 @@
 </head>
 
 <body class="impact">
-    <header>
+    <header style="background-color: #0d47a1; color: white; padding: 1em; text-align: center;">
         <h1>Cultural Impact & Personal Experience</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="Statistics.html">Statistics & Timeline</a>
-            <a href="impact.html">Cultural Impact & Personal Experience</a>
+            <a href="index.html" style="color: white; margin-right: 15px;">Home</a>
+            <a href="Statistics.html" style="color: white; margin-right: 15px;">Statistics & Timeline</a>
+            <a href="impact.html" style="color: white;">Cultural Impact</a>
         </nav>
     </header>
 
     <main class="layout">
-        <!-- LEFT SIDEBAR NAV -->
+        <!-- LEFT NAV SIDEBAR -->
         <aside class="sidebar-left">
             <h3>ICONIC MATCHES AND STATS</h3>
             <ul>
@@ -147,22 +176,33 @@
             </section>
         </div>
 
-        <!-- RIGHT SIDEBAR - TRENDING -->
+        <!-- TRENDING TOPICS SIDEBAR -->
         <aside class="sidebar-right">
             <h3>TRENDING TOPICS</h3>
-            <ul>
-                <li>Messi vs. Ronaldo</li>
-                <li>Most Watched Clásicos</li>
-                <li>Spanish Football Politics</li>
-            </ul>
+
+            <div class="trending-card">
+                <h4>Messi vs. Ronaldo</h4>
+                <p>Their rivalry defined a generation of Clásico fans.</p>
+            </div>
+
+            <div class="trending-card">
+                <h4>Most Watched Clásicos</h4>
+                <p>El Clásico draws over 600M viewers across the world.</p>
+            </div>
+
+            <div class="trending-card">
+                <h4>Politics of Football</h4>
+                <p>El Clásico reflects deeper tensions within Spanish society.</p>
+            </div>
         </aside>
     </main>
 
-    <footer>
+    <footer style="text-align: center; background-color: #e3e3e3; padding: 1em; margin-top: 2em;">
         <p>Project created by Jared Gonzalez</p>
     </footer>
 </body>
 </html>
+
 
 
 
