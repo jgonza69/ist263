@@ -7,99 +7,89 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background-color: #f4f4f4;
+            background-color: #f7f7f7;
+        }
+
+        .layout {
+            display: flex;
+            padding: 2em;
+            gap: 2em;
+        }
+
+        .sidebar-left {
+            flex: 1 1 20%;
+            background-color: #fff;
+            border-right: 1px solid #ddd;
+            padding: 1em;
+        }
+
+        .sidebar-left h3 {
+            font-size: 1em;
+            margin-bottom: 1em;
+        }
+
+        .sidebar-left ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .sidebar-left li {
+            padding: 0.5em 0;
+            border-bottom: 1px solid #eee;
         }
 
         .main-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2em;
+            flex: 1 1 60%;
+            background-color: #fff;
             padding: 2em;
-            animation: fadeIn 1.2s ease;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
         }
 
-        .content {
-            flex: 1 1 65%;
-            background-color: #ffffff;
-            padding: 2em;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .sidebar {
-            flex: 1 1 30%;
-            background-color: #fffef4;
-            padding: 1.5em;
-            border-left: 5px solid #f39c12;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        .sidebar-right {
+            flex: 1 1 20%;
+            background-color: #fff;
+            padding: 1em;
+            border-left: 1px solid #ddd;
         }
 
         .highlight {
             background-color: #fffbe6;
-            border-left: 5px solid #f39c12;
             padding: 1em;
+            border-left: 4px solid #f39c12;
             margin: 1.5em 0;
             font-style: italic;
-            font-size: 1.1em;
         }
 
-        img {
-            width: 100%;
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1em;
             margin-top: 1em;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
         }
 
-        img:hover {
-            transform: scale(1.02);
+        .photo-grid img {
+            width: 100%;
+            border-radius: 6px;
         }
 
         .quote-block {
-            font-size: 1.1em;
-            margin-top: 1em;
+            margin: 1.5em 0;
             padding: 1em;
             background-color: #fff4cc;
             border-left: 5px solid #f39c12;
             border-radius: 6px;
         }
 
-        .card {
-            background-color: #ffffff;
-            padding: 1em;
-            margin-top: 1em;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-            border-radius: 8px;
-        }
-
-        /* Lightbox modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 10px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
         @media (max-width: 768px) {
-            .main-content {
+            .layout {
                 flex-direction: column;
                 padding: 1em;
+            }
+
+            .sidebar-left,
+            .sidebar-right {
+                border: none;
             }
         }
     </style>
@@ -107,7 +97,7 @@
 
 <body class="impact">
     <header>
-        <h1>Cultural Impact & My Personal Experience</h1>
+        <h1>Cultural Impact & Personal Experience</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="Statistics.html">Statistics & Timeline</a>
@@ -115,74 +105,65 @@
         </nav>
     </header>
 
-    <main class="main-content">
-        <!-- LEFT MAIN CONTENT -->
-        <div class="content">
+    <main class="layout">
+        <!-- LEFT SIDEBAR NAV -->
+        <aside class="sidebar-left">
+            <h3>ICONIC MATCHES AND STATS</h3>
+            <ul>
+                <li>Key Facts and Stats</li>
+                <li>Interactive Timeline</li>
+                <li>Legendary Matches</li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
             <section>
-                <h2>The Cultural Impact of El Clásico</h2>
-                <p>El Clásico is more than just a football match — it's a political, social, and emotional clash between two distinct identities.</p>
+                <h2>El Clásico: More Than Just a Game</h2>
                 <div class="highlight">
-                    Barcelona is seen as a symbol of Catalan pride and independence, while Madrid is tied to Spain’s centralized power.
+                    Barcelona is more than a club. Real Madrid is a club of champions.
                 </div>
-                <p>The rivalry echoes through history: civil wars, dictatorships, and regional battles for autonomy. That’s what makes this match so intense — it's about something bigger than sport.</p>
-                <p>Globally, El Clásico has become a brand. Players like Messi and Ronaldo have turned it into the most-watched rivalry in sports, inspiring documentaries, shirts, songs, and even street murals across the world.</p>
+                <p>For many fans, El Clásico isn’t just about football — it represents pride, identity, and cultural history. FC Barcelona symbolizes Catalan nationalism and independence. Real Madrid has long been connected to Spanish centralism and success.</p>
+                <p>The rivalry appears in media, politics, social movements, and even street art across the world.</p>
             </section>
 
             <section>
-                <h2>My Personal El Clásico Experience</h2>
+                <h2>My Personal Experience in Madrid</h2>
                 <div class="quote-block">
-                    “It was loud. It was emotional. It was unforgettable.”  
+                    “I’ll never forget the roar of the Bernabéu or the heartbreak of a 4-0 loss.”
                 </div>
-                <p>When I attended El Clásico at the Santiago Bernabéu, I felt like I was inside a movie. There were flags waving, drums pounding, and chants echoing throughout the city streets.</p>
+                <p>Walking into the Santiago Bernabéu, I felt the tension and energy right away. Fans were chanting, waving flags, and dressed in white or blaugrana. Even before kickoff, the stadium was electric.</p>
                 <ul>
-                    <li><strong>Atmosphere:</strong> Even hours before the match, fans flooded the streets.</li>
-                    <li><strong>The Match:</strong> I watched Real Madrid lose 4-0 — a shocking result.</li>
-                    <li><strong>Emotions:</strong> Even in defeat, the Madrid crowd showed passion and pride.</li>
+                    <li><strong>Atmosphere:</strong> Passion everywhere — I felt part of something historic.</li>
+                    <li><strong>The Match:</strong> Real Madrid lost badly, but the support never stopped.</li>
+                    <li><strong>The Fans:</strong> I was blown away by how loyal and loud they were.</li>
                 </ul>
 
-                <img src="https://jgonza69.github.io/ist263/Project5/Spain1.jpeg" alt="Personal Experience 1" onclick="openModal(this)">
-                <img src="https://jgonza69.github.io/ist263/Project5/Spain2.jpeg" alt="Personal Experience 2" onclick="openModal(this)">
-                <img src="https://jgonza69.github.io/ist263/Project5/Rayo.jpeg" alt="Personal Experience 3" onclick="openModal(this)">
+                <div class="photo-grid">
+                    <img src="https://jgonza69.github.io/ist263/Project5/Spain1.jpeg" alt="Spain 1">
+                    <img src="https://jgonza69.github.io/ist263/Project5/Spain2.jpeg" alt="Spain 2">
+                    <img src="https://jgonza69.github.io/ist263/Project5/Rayo.jpeg" alt="Spain 3">
+                </div>
             </section>
         </div>
 
-        <!-- RIGHT SIDEBAR -->
-        <aside class="sidebar">
-            <h3>From the Crowd</h3>
-            <p>"They say you haven’t seen passion until you’ve seen a Clásico in person."</p>
-
-            <div class="card">
-                <h4>Featured Player</h4>
-                <p><strong>Lionel Messi</strong></p>
-                <p>Most goals in El Clásico history (26)</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Lionel_Messi_20180626.jpg" alt="Messi" style="width: 100%; border-radius: 8px;">
-            </div>
+        <!-- RIGHT SIDEBAR - TRENDING -->
+        <aside class="sidebar-right">
+            <h3>TRENDING TOPICS</h3>
+            <ul>
+                <li>Messi vs. Ronaldo</li>
+                <li>Most Watched Clásicos</li>
+                <li>Spanish Football Politics</li>
+            </ul>
         </aside>
     </main>
 
     <footer>
         <p>Project created by Jared Gonzalez</p>
     </footer>
-
-    <!-- Lightbox Modal -->
-    <div id="lightboxModal" class="modal" onclick="closeModal()">
-        <img id="lightboxImage" src="">
-    </div>
-
-    <script>
-        function openModal(img) {
-            const modal = document.getElementById("lightboxModal");
-            const modalImg = document.getElementById("lightboxImage");
-            modalImg.src = img.src;
-            modal.style.display = "flex";
-        }
-
-        function closeModal() {
-            document.getElementById("lightboxModal").style.display = "none";
-        }
-    </script>
 </body>
 </html>
+
 
 
 
