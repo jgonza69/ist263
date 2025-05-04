@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Clásico - Home</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts Embed Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    /* Skip link styles */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      z-index: 100;
+      transition: top 0.3s;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Apply Comic Relief font to all header tags */
+    h1, h2, h3, h4 {
+      font-family: 'Comic Relief', system-ui;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav.top-nav {
+      background-color: #A71816;
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+
+    nav.top-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      padding: 2em;
+      gap: 2em;
+    }
+
+    .sidebar-left {
+      flex: 0 0 220px;
+      background-color: #fff;
+      padding: 1em;
+      border-right: 2px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .sidebar-left h3 {
+      color: #e53935;
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links li {
+      margin: 0.8em 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #222;
+      display: block;
+      padding: 0.5em;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #e53935;
+      color: white;
+    }
+
+    .main-content {
+      flex: 1;
+      background-color: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .match-block {
+      margin-bottom: 2em;
+    }
+
+    .match-block img {
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+      margin: 0.5em auto;
+      border-radius: 8px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #e53935;
+      padding-bottom: 0.3em;
+      margin-bottom: 1em;
+      font-size: 1.6em;
+    }
+
+    ul {
+      padding-left: 1.2em;
+    }
+
+    .history-flex {
+      display: flex;
+      gap: 1.5em;
+      flex-wrap: wrap;
+      margin-top: 1em;
+    }
+
+    .history-card {
+      background-color: #f4f4f4;
+      border-left: 5px solid #e53935;
+      padding: 1em;
+      border-radius: 6px;
+      flex: 1 1 280px;
+    }
+
+    footer {
+      background-color: #eee;
+      text-align: center;
+      padding: 1em;
+      margin-top: 3em;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 1em;
+      }
+
+      .sidebar-left {
+        border-right: none;
+        border-bottom: 2px solid #ddd;
+      }
+
+      .history-flex {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body class="index">
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <header>
+    <h1>EL CLÁSICO: The Greatest Rivalry in Soccer History</h1>
+  </header>
+
+  <nav class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="Statistics.html">Stats</a>
+    <a href="impact.html">Culture Impact</a>
+  </nav>
+
+  <main id="main-content" class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar-left">
+      <h3>EL CLÁSICO</h3>
+      <ul class="nav-links">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="#history">📜 History</a></li>
+        <li><a href="#iconic">⭐ Iconic Matches</a></li>
+        <li><a href="#evolution">📊 Evolution</a></li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <section>
+        <h2>WHAT IS EL CLÁSICO?</h2>
+        <p>
+          El Clásico is more than just a soccer match—it’s a battle between two of the biggest clubs in the world,
+          FC Barcelona and Real Madrid. Every time they face off, millions of fans tune in to witness the drama, skill,
+          and intensity that define this legendary rivalry.
+        </p>
+        <ul>
+          <li>
+            The term "El Clásico" refers to any match between <strong>FC Barcelona and Real Madrid</strong> in
+            <em>La Liga, the Spanish Cup (Copa del Rey), the Champions League</em>, or any other competition.
+          </li>
+          <li>It is one of the most-watched sporting events in the world, with over <strong>650 million viewers</strong> per match.</li>
+          <li>The rivalry symbolizes regional pride, political history, and footballing dominance.</li>
+        </ul>
+      </section>
+
+      <section id="history">
+        <h2>HISTORICAL ORIGINS</h2>
+        <p>
+          The first recorded match between FC Barcelona and Real Madrid dates back to 1902. But beyond the field,
+          their rivalry grew with the socio-political divide between Catalonia and central Spain.
+          Barcelona became a symbol of Catalan identity and resistance, while Madrid was seen as the establishment's club.
+        </p>
+
+        <div class="history-flex">
+          <div class="history-card">
+            <h4>Early 20th Century</h4>
+            <p>Both clubs competed fiercely in early cup matches, sowing the seeds of a century-long rivalry.</p>
+          </div>
+          <div class="history-card">
+            <h4>Franco Era</h4>
+            <p>Under the dictatorship, Madrid received more political favor. Barcelona stood for cultural resistance.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="evolution">
+        <h2>EVOLUTION OVER THE YEARS</h2>
+        <p>
+          In the modern football era, El Clásico has evolved into a global spectacle. From the Galácticos of Madrid to
+          Barcelona’s tiki-taka generation, the fixture has consistently delivered unforgettable moments.
+        </p>
+
+        <div class="history-flex">
+          <div class="history-card">
+            <h4>2000s & Galácticos</h4>
+            <p>Real Madrid assembled a team of superstars like Zidane, Ronaldo, and Beckham.</p>
+          </div>
+          <div class="history-card">
+            <h4>Messi vs. Ronaldo</h4>
+            <p>This era intensified viewership and brought worldwide attention to the rivalry.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="iconic">
+        <h2>ICONIC MATCHES</h2>
+
+        <div class="match-block">
+          <h3>April 23, 2017 – Messi scores a last-minute winner and holds his jersey up to the Madrid crowd.</h3>
+          <img src="https://jgonza69.github.io/ist263/Project5/Messi.jpeg" alt="Messi celebration" />
+        </div>
+
+        <div class="match-block">
+          <h3>November 19, 2005 – Ronaldinho’s brilliance compels Madrid fans to applaud a Barcelona player.</h3>
+          <img src="https://jgonza69.github.io/ist263/Project5/Ronaldinho.jpeg" alt="Ronaldinho performance" />
+        </div>
+
+        <div class="match-block">
+          <h3>March 1, 2020 – Real Madrid’s win secures their path to the league title.</h3>
+          <img src="https://jgonza69.github.io/ist263/Project5/Sergio.jpeg" alt="Real Madrid league title" />
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Project created by Jared Gonzalez</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

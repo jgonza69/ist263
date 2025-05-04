@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Clásico - Cultural Impact & Personal Experience</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts Embed Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    /* Apply Comic Relief font to headers */
+    h1, h2, h3, h4 {
+      font-family: 'Comic Relief', system-ui;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #A71816;
+      color: white;
+      padding: 8px;
+      z-index: 100;
+      transition: top 0.3s;
+    }
+
+    .skip-link:focus {
+      top: 10px;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav.top-nav {
+      background-color: #A71816;
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+
+    nav.top-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      padding: 2em;
+      gap: 2em;
+    }
+
+    .sidebar-left {
+      flex: 0 0 220px;
+      background-color: #fff;
+      padding: 1em;
+      border-right: 2px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .sidebar-left h3 {
+      color: #e53935;
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links li {
+      margin: 0.8em 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #222;
+      display: block;
+      padding: 0.5em;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #e53935;
+      color: white;
+    }
+
+    .main-content {
+      flex: 1;
+      background-color: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .highlight-box, .quote-block, .photo-grid, .trending-card {
+      margin-top: 1em;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1em;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .quote-block {
+      background-color: #e3f2fd;
+      border-left: 5px solid #2196f3;
+      padding: 1em;
+      border-radius: 6px;
+    }
+
+    .trending-card {
+      background-color: #f7f7f7;
+      border: 1px solid #ccc;
+      padding: 1em;
+      margin-bottom: 1em;
+      border-radius: 8px;
+    }
+    .trending-card h4 {
+    color: #9E1715
+    }
+
+
+    footer {
+      background-color: #eee;
+      text-align: center;
+      padding: 1em;
+      margin-top: 3em;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 1em;
+      }
+
+      .sidebar-left {
+        border-right: none;
+        border-bottom: 2px solid #ddd;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body class="impact">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>Cultural Impact & Personal Experience</h1>
+  </header>
+
+  <nav class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="Statistics.html">Stats</a>
+    <a href="impact.html">Cultural Impact</a>
+  </nav>
+
+  <main class="container" id="main-content">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar-left">
+      <h3>Sections</h3>
+      <ul class="nav-links">
+        <li><a href="#culture">🇪🇸 Culture</a></li>
+        <li><a href="#experience">🕺🏽 My Experience</a></li>
+        <li><a href="#gallery">📸 Photo Gallery</a></li>
+        <li><a href="#quote">ⓠ Quote Rotator</a></li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <section id="culture">
+        <h2>El Clásico: More Than Just a Game</h2>
+        <div class="highlight-box">
+          Barcelona is more than a club. Real Madrid is a club of champions.
+        </div>
+        <p>
+          El Clásico isn’t just about football — it represents pride, identity, and cultural history. FC Barcelona symbolizes Catalan nationalism and independence. Real Madrid has long been connected to Spanish centralism and success.
+        </p>
+        <p>
+          From graffiti in Barcelona to chants in Madrid, the rivalry lives in the everyday culture of Spain and around the world.
+        </p>
+      </section>
+
+      <section id="experience">
+        <h2>My Personal Experience in Madrid</h2>
+        <div class="quote-block">
+          “I’ll never forget the roar of the Bernabéu or the heartbreak of a 4-0 loss.”
+        </div>
+        <p>
+          Walking into the Santiago Bernabéu, I felt the tension and energy right away. Fans were chanting, waving flags, and dressed in white or blaugrana. Even before kickoff, the stadium was electric.
+        </p>
+        <ul>
+          <li><strong>Atmosphere:</strong> Passion everywhere — I felt part of something historic.</li>
+          <li><strong>The Match:</strong> Real Madrid lost badly, but the support never stopped.</li>
+          <li><strong>The Fans:</strong> I was blown away by how loyal and loud they were.</li>
+        </ul>
+      </section>
+
+      <section id="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="photo-grid">
+          <img src="https://jgonza69.github.io/ist263/Project5/Spain1.jpeg" alt="Spain 1" />
+          <img src="https://jgonza69.github.io/ist263/Project5/Spain2.jpeg" alt="Spain 2" />
+          <img src="https://jgonza69.github.io/ist263/Project5/Rayo.jpeg" alt="Spain 3" />
+        </div>
+      </section>
+
+      <section id="quote">
+        <h2>Quote Rotator</h2>
+        <div class="quote-block" id="dynamicQuote">
+          “Football is not just a game — it’s an identity.”
+        </div>
+        <button class="fact-btn" onclick="changeQuote()">Show Another Quote</button>
+      </section>
+
+      <section>
+        <h2>Trending Topics</h2>
+
+        <div class="trending-card">
+          <h4>Most Watched Clásicos</h4>
+          <p>With over 600 million viewers tuning in from across the globe, El Clásico has become the most anticipated event in the football calendar. It’s not just a game — it’s a worldwide celebration of passion and skill.</p>
+        </div>
+
+        <div class="trending-card">
+          <h4>Messi vs. Ronaldo</h4>
+          <p>From 2009 to 2018, these two legends fueled the rivalry with unmatched intensity. Every match was a spectacle, with fans eagerly awaiting who would outshine the other. Their legacy in El Clásico will never be forgotten.</p>
+        </div>
+
+        <div class="trending-card">
+          <h4>Politics of Football</h4>
+          <iframe src="https://www.youtube.com/embed/2WpkS9AUdLY?si=NMjBhYSFmSuWQneo" allowfullscreen></iframe>
+          <p>El Clásico reflects deeper tensions within Spanish society. Barcelona’s stance as a symbol of Catalan independence contrasts sharply with Madrid’s association with Spanish nationalism, making every match more than just a game.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Project created by Jared Gonzalez</p>
+  </footer>
+
+  <script>
+    const quotes = [
+      "“Football is not just a game — it’s an identity.”",
+      "“In Spain, El Clásico is a civil war of passion.”",
+      "“More than a match — it’s a cultural battle.”",
+      "“You don’t watch El Clásico. You live it.”",
+      "“One match. Two worlds. Infinite emotions.”"
+    ];
+
+    function changeQuote() {
+      const quoteBox = document.getElementById("dynamicQuote");
+      const index = Math.floor(Math.random() * quotes.length);
+      quoteBox.textContent = quotes[index];
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

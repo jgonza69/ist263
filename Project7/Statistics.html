@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Clásico - Statistics & Timeline</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts Embed Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    /* Apply Comic Relief font to all header tags */
+    h1, h2, h3, h4 {
+      font-family: 'Comic Relief', system-ui;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #A71816;
+      color: white;
+      padding: 8px;
+      z-index: 100;
+      transition: top 0.3s;
+    }
+
+    .skip-link:focus {
+      top: 10px;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav.top-nav {
+      background-color: #A71816;
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+
+    nav.top-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      padding: 2em;
+      gap: 2em;
+    }
+
+    .sidebar-left {
+      flex: 0 0 220px;
+      background-color: #fff;
+      padding: 1em;
+      border-right: 2px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .sidebar-left h3 {
+      color: #e53935;
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links li {
+      margin: 0.8em 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #222;
+      display: block;
+      padding: 0.5em;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #e53935;
+      color: white;
+    }
+
+    .main-content {
+      flex: 1;
+      background-color: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      border-bottom: 2px solid #e53935;
+      padding-bottom: 0.3em;
+      margin-bottom: 1em;
+      font-size: 1.6em;
+    }
+
+    ul {
+      padding-left: 1.2em;
+    }
+
+    .accordion {
+      background-color: #eee;
+      color: #000;
+      cursor: pointer;
+      padding: 1em;
+      width: 100%;
+      border: none;
+      text-align: left;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+      margin-top: 1em;
+      border-radius: 4px;
+    }
+
+    .accordion:hover {
+      background-color: #ccc;
+    }
+
+    .panel {
+      padding: 1em;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+      border-left: 4px solid #e53935;
+      margin-bottom: 1em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+
+    table th,
+    table td {
+      border: 1px solid #ccc;
+      padding: 0.75em;
+      text-align: center;
+    }
+
+    .fact-box {
+      margin-top: 1em;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 1em;
+      border-radius: 5px;
+    }
+
+    .fact-btn {
+      margin-top: 1em;
+      padding: 0.5em 1em;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .fact-btn:hover {
+      background-color: #e53935;
+    }
+
+    img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 6px;
+      margin-top: 0.5em;
+    }
+
+    footer {
+      background-color: #eee;
+      text-align: center;
+      padding: 1em;
+      margin-top: 3em;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 1em;
+      }
+
+      .sidebar-left {
+        border-right: none;
+        border-bottom: 2px solid #ddd;
+      }
+    }
+  </style>
+</head>
+
+<body class="stats">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>El Clásico - Statistics & Timeline</h1>
+  </header>
+
+  <nav class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="Statistics.html">Stats</a>
+    <a href="impact.html">Cultural Impact</a>
+  </nav>
+
+  <main class="container" id="main-content">
+    <aside class="sidebar-left">
+      <h3>Match Info</h3>
+      <ul class="nav-links">
+        <li><a href="#key-facts">📊 Key Stats</a></li>
+        <li><a href="#timeline">🕰️ Timeline</a></li>
+        <li><a href="#records">🏆 Historic Records</a></li>
+        <li><a href="#fun-facts">🎉 Fun Facts</a></li>
+      </ul>
+    </aside>
+
+    <div class="main-content">
+      <section id="key-facts">
+        <h2>Key Facts & Statistics</h2>
+        <ul>
+          <li><strong>Total Official Matches:</strong> 250+</li>
+          <li><strong>All-Time Top Scorer:</strong> Lionel Messi (26 goals)</li>
+          <li><strong>Biggest Victory:</strong> Real Madrid 11-1 Barcelona (1943)</li>
+          <li><strong>Most Wins:</strong> Real Madrid (slight edge)</li>
+          <li><strong>Most Appearances:</strong> Sergio Ramos (45 matches)</li>
+        </ul>
+      </section>
+
+      <section id="timeline">
+        <h2>Interactive Timeline of El Clásico</h2>
+
+        <button class="accordion">November 19, 2005 - Ronaldinho’s Ovation</button>
+        <div class="panel">
+          <p>Ronaldinho received a standing ovation from Real Madrid fans after a magical performance.</p>
+          <a href="https://www.youtube.com/watch?v=i2kdIbn0Uoc" target="_blank">Watch highlights</a>
+          <img src="https://jgonza69.github.io/ist263/Project5/Joya.jpeg" alt="Ronaldinho ovation" />
+        </div>
+
+        <button class="accordion">April 23, 2017 - Messi’s Last-Second Winner</button>
+        <div class="panel">
+          <p>Messi scored in stoppage time and held up his jersey to silence the crowd.</p>
+          <a href="https://www.youtube.com/watch?v=hLVZBN3PH6U" target="_blank">Watch highlights</a>
+          <img src="https://jgonza69.github.io/ist263/Project5/Messi2.jpeg" alt="Messi goal" />
+        </div>
+
+        <button class="accordion">March 2, 2019 - Four Wins in a Row</button>
+        <div class="panel">
+          <p>Barcelona secured their fourth consecutive win at the Bernabéu.</p>
+          <a href="https://www.youtube.com/watch?v=1wMHHbBg9wo" target="_blank">Watch highlights</a>
+          <img src="https://jgonza69.github.io/ist263/Project5/Barca.jpeg" alt="Barcelona win" />
+        </div>
+      </section>
+
+      <section id="records">
+        <h2>Historic Match Records</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Record</th>
+              <th>Real Madrid</th>
+              <th>FC Barcelona</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Total Wins</td>
+              <td>100+</td>
+              <td>100+</td>
+            </tr>
+            <tr>
+              <td>Champions League Titles</td>
+              <td>14</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>La Liga Titles</td>
+              <td>35</td>
+              <td>27</td>
+            </tr>
+            <tr>
+              <td>Most Goals in One Clásico</td>
+              <td colspan="2">Real Madrid 11-1 Barcelona (1943)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="fun-facts">
+        <h2>Did You Know?</h2>
+        <div class="fact-box" id="factBox">
+          Click the button to reveal a random El Clásico fact!
+        </div>
+        <button class="fact-btn" onclick="showRandomFact()">Show Fact</button>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Project created by Jared Gonzalez</p>
+  </footer>
+
+  <script>
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    }
+
+    const facts = [
+      "El Clásico draws over 600 million viewers worldwide.",
+      "Messi has the most goals in Clásico history with 26.",
+      "Sergio Ramos has appeared in more Clásicos than anyone.",
+      "The rivalry dates back to 1902.",
+      "Real Madrid and Barcelona have faced off in over 250 official matches."
+    ];
+
+    function showRandomFact() {
+      const index = Math.floor(Math.random() * facts.length);
+      document.getElementById("factBox").innerText = facts[index];
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
