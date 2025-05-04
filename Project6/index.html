@@ -7,6 +7,11 @@
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="style.css" />
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* your existing styles continue... */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -94,9 +99,11 @@
 
     .match-block img {
       width: 100%;
-      max-width: 600px;
+      max-width: 500px;
+      height: 300px;
+      object-fit: cover;
       display: block;
-      margin-top: 0.5em;
+      margin: 0.5em auto;
       border-radius: 8px;
     }
 
@@ -104,10 +111,26 @@
       border-bottom: 2px solid #e53935;
       padding-bottom: 0.3em;
       margin-bottom: 1em;
+      font-size: 1.6em;
     }
 
     ul {
       padding-left: 1.2em;
+    }
+
+    .history-flex {
+      display: flex;
+      gap: 1.5em;
+      flex-wrap: wrap;
+      margin-top: 1em;
+    }
+
+    .history-card {
+      background-color: #f4f4f4;
+      border-left: 5px solid #e53935;
+      padding: 1em;
+      border-radius: 6px;
+      flex: 1 1 280px;
     }
 
     footer {
@@ -127,6 +150,10 @@
         border-right: none;
         border-bottom: 2px solid #ddd;
       }
+
+      .history-flex {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -138,11 +165,8 @@
 
   <nav class="top-nav">
     <a href="index.html">Home</a>
-    <a href="#">History</a>
-    <a href="#">Iconic Matches</a>
     <a href="Statistics.html">Stats</a>
     <a href="impact.html">Culture Impact</a>
-    <a href="#">Personal Story</a>
   </nav>
 
   <main class="container">
@@ -151,11 +175,9 @@
       <h3>EL CLÁSICO</h3>
       <ul class="nav-links">
         <li><a href="index.html">🏠 Home</a></li>
-        <li><a href="#">📜 History</a></li>
-        <li><a href="#">⭐ Iconic Matches</a></li>
-        <li><a href="Statistics.html">📊 Stats and Records</a></li>
-        <li><a href="impact.html">🌍 Cultural Impact</a></li>
-        <li><a href="#">🧑‍💬 Personal Story</a></li>
+        <li><a href="#history">📜 History</a></li>
+        <li><a href="#iconic">⭐ Iconic Matches</a></li>
+        <li><a href="#evolution">📊 Evolution</a></li>
       </ul>
     </aside>
 
@@ -178,7 +200,46 @@
         </ul>
       </section>
 
-      <section>
+      <section id="history">
+        <h2>HISTORICAL ORIGINS</h2>
+        <p>
+          The first recorded match between FC Barcelona and Real Madrid dates back to 1902. But beyond the field,
+          their rivalry grew with the socio-political divide between Catalonia and central Spain.
+          Barcelona became a symbol of Catalan identity and resistance, while Madrid was seen as the establishment's club.
+        </p>
+
+        <div class="history-flex">
+          <div class="history-card">
+            <h4>Early 20th Century</h4>
+            <p>Both clubs competed fiercely in early cup matches, sowing the seeds of a century-long rivalry.</p>
+          </div>
+          <div class="history-card">
+            <h4>Franco Era</h4>
+            <p>Under the dictatorship, Madrid received more political favor. Barcelona stood for cultural resistance.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="evolution">
+        <h2>EVOLUTION OVER THE YEARS</h2>
+        <p>
+          In the modern football era, El Clásico has evolved into a global spectacle. From the Galácticos of Madrid to
+          Barcelona’s tiki-taka generation, the fixture has consistently delivered unforgettable moments.
+        </p>
+
+        <div class="history-flex">
+          <div class="history-card">
+            <h4>2000s & Galácticos</h4>
+            <p>Real Madrid assembled a team of superstars like Zidane, Ronaldo, and Beckham.</p>
+          </div>
+          <div class="history-card">
+            <h4>Messi vs. Ronaldo</h4>
+            <p>This era intensified viewership and brought worldwide attention to the rivalry.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="iconic">
         <h2>ICONIC MATCHES</h2>
 
         <div class="match-block">
@@ -204,6 +265,10 @@
   </footer>
 </body>
 </html>
+
+
+
+
 
 
 

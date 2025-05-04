@@ -6,6 +6,180 @@
   <title>El Clásico - Statistics & Timeline</title>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav.top-nav {
+      background-color: #e53935;
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+
+    nav.top-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      padding: 2em;
+      gap: 2em;
+    }
+
+    .sidebar-left {
+      flex: 0 0 220px;
+      background-color: #fff;
+      padding: 1em;
+      border-right: 2px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .sidebar-left h3 {
+      color: #e53935;
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links li {
+      margin: 0.8em 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #222;
+      display: block;
+      padding: 0.5em;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #e53935;
+      color: white;
+    }
+
+    .main-content {
+      flex: 1;
+      background-color: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      border-bottom: 2px solid #e53935;
+      padding-bottom: 0.3em;
+      margin-bottom: 1em;
+      font-size: 1.6em;
+    }
+
+    ul {
+      padding-left: 1.2em;
+    }
+
+    .accordion {
+      background-color: #eee;
+      color: #000;
+      cursor: pointer;
+      padding: 1em;
+      width: 100%;
+      border: none;
+      text-align: left;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+      margin-top: 1em;
+      border-radius: 4px;
+    }
+
+    .accordion:hover {
+      background-color: #ccc;
+    }
+
+    .panel {
+      padding: 1em;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+      border-left: 4px solid #e53935;
+      margin-bottom: 1em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+
+    table th,
+    table td {
+      border: 1px solid #ccc;
+      padding: 0.75em;
+      text-align: center;
+    }
+
+    .fact-box {
+      margin-top: 1em;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 1em;
+      border-radius: 5px;
+    }
+
+    .fact-btn {
+      margin-top: 1em;
+      padding: 0.5em 1em;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .fact-btn:hover {
+      background-color: #e53935;
+    }
+
+    img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 6px;
+      margin-top: 0.5em;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 1em;
+      }
+
+      .sidebar-left {
+        border-right: none;
+        border-bottom: 2px solid #ddd;
+      }
+    }
+  </style>
 </head>
 
 <body class="stats">
@@ -20,18 +194,16 @@
   </nav>
 
   <main class="container">
-    <!-- SIDEBAR -->
     <aside class="sidebar-left">
       <h3>Match Info</h3>
       <ul class="nav-links">
-        <li><a href="#key-facts">Key Stats</a></li>
-        <li><a href="#timeline">Timeline</a></li>
-        <li><a href="#records">Historic Records</a></li>
-        <li><a href="#fun-facts">Fun Facts</a></li>
+        <li><a href="#key-facts">📊 Key Stats</a></li>
+        <li><a href="#timeline">🕰️ Timeline</a></li>
+        <li><a href="#records">🏆 Historic Records</a></li>
+        <li><a href="#fun-facts">🎉 Fun Facts</a></li>
       </ul>
     </aside>
 
-    <!-- MAIN CONTENT -->
     <div class="main-content">
       <section id="key-facts">
         <h2>Key Facts & Statistics</h2>
@@ -118,7 +290,6 @@
   </footer>
 
   <script>
-    // Accordion toggle
     const acc = document.getElementsByClassName("accordion");
     for (let i = 0; i < acc.length; i++) {
       acc[i].addEventListener("click", function () {
@@ -128,7 +299,6 @@
       });
     }
 
-    // Random facts
     const facts = [
       "El Clásico draws over 600 million viewers worldwide.",
       "Messi has the most goals in Clásico history with 26.",
