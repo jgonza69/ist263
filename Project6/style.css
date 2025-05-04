@@ -226,8 +226,17 @@ body {
     padding: 1em;
     margin-bottom: 1em;
     border-radius: 8px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   }
+  
+  .trending-card:hover {
+    background-color: #ffeaea;
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(229, 57, 53, 0.2);
+    cursor: pointer;
+  }
+  
   
   .trending-card:hover {
     background-color: #ffeaea;

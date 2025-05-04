@@ -23,6 +23,22 @@
       background-color: #f9f9f9;
     }
 
+    /* Skip link styles */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      z-index: 100;
+      transition: top 0.3s;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
     /* Apply Comic Relief font to all header tags */
     h1, h2, h3, h4 {
       font-family: 'Comic Relief', system-ui;
@@ -169,6 +185,8 @@
 </head>
 
 <body class="index">
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
   <header>
     <h1>EL CLÁSICO: The Greatest Rivalry in Soccer History</h1>
   </header>
@@ -179,7 +197,7 @@
     <a href="impact.html">Culture Impact</a>
   </nav>
 
-  <main class="container">
+  <main id="main-content" class="container">
     <!-- SIDEBAR -->
     <aside class="sidebar-left">
       <h3>EL CLÁSICO</h3>
@@ -275,6 +293,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
