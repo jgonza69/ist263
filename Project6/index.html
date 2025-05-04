@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>El Clásico - Home</title>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="style.css" />
@@ -9,7 +10,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background-color: #f9f9f9;
     }
 
     header {
@@ -19,14 +20,9 @@
       text-align: center;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 1.8em;
-    }
-
     nav.top-nav {
       background-color: #e53935;
-      padding: 0.8em;
+      padding: 1em;
       display: flex;
       justify-content: center;
       gap: 2em;
@@ -46,45 +42,50 @@
     }
 
     .sidebar-left {
-      flex: 1 1 20%;
-      background-color: white;
+      flex: 0 0 220px;
+      background-color: #fff;
       padding: 1em;
       border-right: 2px solid #ddd;
+      border-radius: 8px;
     }
 
     .sidebar-left h3 {
-      font-size: 1em;
-      margin-bottom: 1em;
       color: #e53935;
+      font-size: 1.2em;
+      margin-bottom: 1em;
     }
 
-    .sidebar-left ul {
+    .nav-links {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
 
-    .sidebar-left li {
-      padding: 0.5em 0;
+    .nav-links li {
+      margin: 0.8em 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
       font-weight: bold;
-      border-bottom: 1px solid #eee;
+      color: #222;
+      display: block;
+      padding: 0.5em;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #e53935;
+      color: white;
     }
 
     .main-content {
-      flex: 1 1 75%;
+      flex: 1;
       background-color: white;
       padding: 2em;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
-    }
-
-    section {
-      margin-bottom: 2em;
-    }
-
-    h2 {
-      border-bottom: 2px solid #e53935;
-      padding-bottom: 0.5em;
-      color: #111;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
 
     .match-block {
@@ -94,16 +95,26 @@
     .match-block img {
       width: 100%;
       max-width: 600px;
-      border-radius: 8px;
       display: block;
-      margin: 0.5em auto;
+      margin-top: 0.5em;
+      border-radius: 8px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #e53935;
+      padding-bottom: 0.3em;
+      margin-bottom: 1em;
+    }
+
+    ul {
+      padding-left: 1.2em;
     }
 
     footer {
       background-color: #eee;
       text-align: center;
       padding: 1em;
-      margin-top: 2em;
+      margin-top: 3em;
     }
 
     @media (max-width: 768px) {
@@ -135,23 +146,23 @@
   </nav>
 
   <main class="container">
-    <!-- LEFT SIDEBAR NAV -->
+    <!-- SIDEBAR -->
     <aside class="sidebar-left">
       <h3>EL CLÁSICO</h3>
-      <ul>
-        <li>HOME</li>
-        <li>HISTORY</li>
-        <li>ICONIC MATCHES</li>
-        <li>STATS AND RECORDS</li>
-        <li>CULTURAL IMPACT</li>
-        <li>PERSONAL STORY</li>
+      <ul class="nav-links">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="#">📜 History</a></li>
+        <li><a href="#">⭐ Iconic Matches</a></li>
+        <li><a href="Statistics.html">📊 Stats and Records</a></li>
+        <li><a href="impact.html">🌍 Cultural Impact</a></li>
+        <li><a href="#">🧑‍💬 Personal Story</a></li>
       </ul>
     </aside>
 
     <!-- MAIN CONTENT -->
     <div class="main-content">
       <section>
-        <h2>What is El Clásico?</h2>
+        <h2>WHAT IS EL CLÁSICO?</h2>
         <p>
           El Clásico is more than just a soccer match—it’s a battle between two of the biggest clubs in the world,
           FC Barcelona and Real Madrid. Every time they face off, millions of fans tune in to witness the drama, skill,
@@ -168,7 +179,7 @@
       </section>
 
       <section>
-        <h2>Iconic Moments</h2>
+        <h2>ICONIC MATCHES</h2>
 
         <div class="match-block">
           <h3>April 23, 2017 – Messi scores a last-minute winner and holds his jersey up to the Madrid crowd.</h3>
@@ -193,5 +204,11 @@
   </footer>
 </body>
 </html>
+
+
+
+
+
+
 
 

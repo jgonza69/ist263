@@ -1,207 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>El Clásico - Cultural Impact & Personal Experience</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            background-color: #f4f4f9;
-            font-family: Arial, sans-serif;
-        }
-
-        .layout {
-            display: flex;
-            padding: 2em;
-            gap: 2em;
-        }
-
-        .sidebar-left {
-            flex: 1 1 20%;
-            background-color: #fff;
-            border-right: 1px solid #ddd;
-            padding: 1em;
-        }
-
-        .sidebar-left h3 {
-            font-size: 1em;
-            margin-bottom: 1em;
-            color: #333;
-        }
-
-        .sidebar-left ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .sidebar-left li {
-            padding: 0.5em 0;
-            border-bottom: 1px solid #eee;
-            color: #222;
-        }
-
-        .main-content {
-            flex: 1 1 60%;
-            background-color: #ffffff;
-            padding: 2em;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-        }
-
-        .sidebar-right {
-            flex: 1 1 20%;
-            background-color: #ffffff;
-            padding: 1em;
-            border-left: 1px solid #ddd;
-        }
-
-        .highlight {
-            background-color: #fff3e0;
-            padding: 1em;
-            border-left: 4px solid #ff9800;
-            margin: 1.5em 0;
-            font-style: italic;
-        }
-
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1em;
-            margin-top: 1em;
-        }
-
-        .photo-grid img {
-            width: 100%;
-            border-radius: 6px;
-        }
-
-        .quote-block {
-            margin: 1.5em 0;
-            padding: 1em;
-            background-color: #e3f2fd;
-            border-left: 5px solid #2196f3;
-            border-radius: 6px;
-        }
-
-        /* Trending topic cards */
-        .trending-card {
-            background-color: #f7f7f7;
-            border: 1px solid #ccc;
-            padding: 1em;
-            margin-bottom: 1em;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .trending-card:hover {
-            background-color: #e0f7fa;
-            transform: scale(1.02);
-            cursor: pointer;
-        }
-
-        .trending-card h4 {
-            margin: 0 0 0.5em;
-            color: #0d47a1;
-        }
-
-        .trending-card p {
-            font-size: 0.9em;
-            color: #444;
-        }
-
-        @media (max-width: 768px) {
-            .layout {
-                flex-direction: column;
-                padding: 1em;
-            }
-
-            .sidebar-left,
-            .sidebar-right {
-                border: none;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Clásico - Cultural Impact & Personal Experience</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="impact">
-    <header style="background-color: #0d47a1; color: white; padding: 1em; text-align: center;">
-        <h1>Cultural Impact & Personal Experience</h1>
-        <nav>
-            <a href="index.html" style="color: white; margin-right: 15px;">Home</a>
-            <a href="Statistics.html" style="color: white; margin-right: 15px;">Statistics & Timeline</a>
-            <a href="impact.html" style="color: white;">Cultural Impact</a>
-        </nav>
-    </header>
+  <header>
+    <h1>Cultural Impact & Personal Experience</h1>
+  </header>
 
-    <main class="layout">
-        <!-- LEFT NAV SIDEBAR -->
-        <aside class="sidebar-left">
-            <h3>ICONIC MATCHES AND STATS</h3>
-            <ul>
-                <li>Key Facts and Stats</li>
-                <li>Interactive Timeline</li>
-                <li>Legendary Matches</li>
-            </ul>
-        </aside>
+  <nav class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="Statistics.html">Stats</a>
+    <a href="impact.html">Cultural Impact</a>
+  </nav>
 
-        <!-- MAIN CONTENT -->
-        <div class="main-content">
-            <section>
-                <h2>El Clásico: More Than Just a Game</h2>
-                <div class="highlight">
-                    Barcelona is more than a club. Real Madrid is a club of champions.
-                </div>
-                <p>For many fans, El Clásico isn’t just about football — it represents pride, identity, and cultural history. FC Barcelona symbolizes Catalan nationalism and independence. Real Madrid has long been connected to Spanish centralism and success.</p>
-                <p>The rivalry appears in media, politics, social movements, and even street art across the world.</p>
-            </section>
+  <main class="container">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar-left">
+      <h3>Sections</h3>
+      <ul class="nav-links">
+        <li><a href="#culture">Culture</a></li>
+        <li><a href="#experience">My Experience</a></li>
+        <li><a href="#gallery">Photo Gallery</a></li>
+        <li><a href="#quote">Quote Rotator</a></li>
+      </ul>
+    </aside>
 
-            <section>
-                <h2>My Personal Experience in Madrid</h2>
-                <div class="quote-block">
-                    “I’ll never forget the roar of the Bernabéu or the heartbreak of a 4-0 loss.”
-                </div>
-                <p>Walking into the Santiago Bernabéu, I felt the tension and energy right away. Fans were chanting, waving flags, and dressed in white or blaugrana. Even before kickoff, the stadium was electric.</p>
-                <ul>
-                    <li><strong>Atmosphere:</strong> Passion everywhere — I felt part of something historic.</li>
-                    <li><strong>The Match:</strong> Real Madrid lost badly, but the support never stopped.</li>
-                    <li><strong>The Fans:</strong> I was blown away by how loyal and loud they were.</li>
-                </ul>
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <section id="culture">
+        <h2>El Clásico: More Than Just a Game</h2>
+        <div class="highlight-box">
+          Barcelona is more than a club. Real Madrid is a club of champions.
+        </div>
+        <p>
+          El Clásico isn’t just about football — it represents pride, identity, and cultural history. FC Barcelona symbolizes Catalan nationalism and independence. Real Madrid has long been connected to Spanish centralism and success.
+        </p>
+        <p>
+          From graffiti in Barcelona to chants in Madrid, the rivalry lives in the everyday culture of Spain and around the world.
+        </p>
+      </section>
 
-                <div class="photo-grid">
-                    <img src="https://jgonza69.github.io/ist263/Project5/Spain1.jpeg" alt="Spain 1">
-                    <img src="https://jgonza69.github.io/ist263/Project5/Spain2.jpeg" alt="Spain 2">
-                    <img src="https://jgonza69.github.io/ist263/Project5/Rayo.jpeg" alt="Spain 3">
-                </div>
-            </section>
+      <section id="experience">
+        <h2>My Personal Experience in Madrid</h2>
+        <div class="quote-block">
+          “I’ll never forget the roar of the Bernabéu or the heartbreak of a 4-0 loss.”
+        </div>
+        <p>
+          Walking into the Santiago Bernabéu, I felt the tension and energy right away. Fans were chanting, waving flags, and dressed in white or blaugrana. Even before kickoff, the stadium was electric.
+        </p>
+        <ul>
+          <li><strong>Atmosphere:</strong> Passion everywhere — I felt part of something historic.</li>
+          <li><strong>The Match:</strong> Real Madrid lost badly, but the support never stopped.</li>
+          <li><strong>The Fans:</strong> I was blown away by how loyal and loud they were.</li>
+        </ul>
+      </section>
+
+      <section id="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="photo-grid">
+          <img src="https://jgonza69.github.io/ist263/Project5/Spain1.jpeg" alt="Spain 1" />
+          <img src="https://jgonza69.github.io/ist263/Project5/Spain2.jpeg" alt="Spain 2" />
+          <img src="https://jgonza69.github.io/ist263/Project5/Rayo.jpeg" alt="Spain 3" />
+        </div>
+      </section>
+
+      <section id="quote">
+        <h2>Quote Rotator</h2>
+        <div class="quote-block" id="dynamicQuote">
+          “Football is not just a game — it’s an identity.”
+        </div>
+        <button class="fact-btn" onclick="changeQuote()">Show Another Quote</button>
+      </section>
+
+      <section>
+        <h2>Trending Topics</h2>
+
+        <div class="trending-card">
+          <h4>Messi vs. Ronaldo</h4>
+          <p>Their rivalry defined a generation of Clásico fans.</p>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/Pi7kHbP6RQE?si=JCUQbJGSGeTH5qQj" frameborder="0" allowfullscreen></iframe>
+          </div>
         </div>
 
-        <!-- TRENDING TOPICS SIDEBAR -->
-        <aside class="sidebar-right">
-            <h3>TRENDING TOPICS</h3>
+        <div class="trending-card">
+          <h4>Most Watched Clásicos</h4>
+          <p>El Clásico draws over 600M viewers across the world.</p>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/ikr4OyJE3QA?si=tu7XSTuNCAOtX2oR" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
 
-            <div class="trending-card">
-                <h4>Messi vs. Ronaldo</h4>
-                <p>Their rivalry defined a generation of Clásico fans.</p>
-            </div>
+        <div class="trending-card">
+          <h4>Politics of Football</h4>
+          <p>El Clásico reflects deeper tensions within Spanish society.</p>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/2WpkS9AUdLY?si=NMjBhYSFmSuWQneo" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
 
-            <div class="trending-card">
-                <h4>Most Watched Clásicos</h4>
-                <p>El Clásico draws over 600M viewers across the world.</p>
-            </div>
+  <footer>
+    <p>Project created by Jared Gonzalez</p>
+  </footer>
 
-            <div class="trending-card">
-                <h4>Politics of Football</h4>
-                <p>El Clásico reflects deeper tensions within Spanish society.</p>
-            </div>
-        </aside>
-    </main>
+  <script>
+    const quotes = [
+      "“Football is not just a game — it’s an identity.”",
+      "“In Spain, El Clásico is a civil war of passion.”",
+      "“More than a match — it’s a cultural battle.”",
+      "“You don’t watch El Clásico. You live it.”",
+      "“One match. Two worlds. Infinite emotions.”"
+    ];
 
-    <footer style="text-align: center; background-color: #e3e3e3; padding: 1em; margin-top: 2em;">
-        <p>Project created by Jared Gonzalez</p>
-    </footer>
+    function changeQuote() {
+      const quoteBox = document.getElementById("dynamicQuote");
+      const index = Math.floor(Math.random() * quotes.length);
+      quoteBox.textContent = quotes[index];
+    }
+  </script>
 </body>
 </html>
+
+
+
 
 
 

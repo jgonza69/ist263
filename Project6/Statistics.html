@@ -1,184 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>El Clásico - Statistics & Timeline</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-        .main-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2em;
-            margin-top: 1.5em;
-        }
-
-        .content {
-            flex: 1 1 65%;
-        }
-
-        .sidebar {
-            flex: 1 1 30%;
-            background-color: #f9f9f9;
-            padding: 1em;
-            border-left: 4px solid #4a90e2;
-            border-radius: 6px;
-        }
-
-        .sidebar h3 {
-            margin-top: 0;
-        }
-
-        .accordion {
-            background-color: #eee;
-            color: #000;
-            cursor: pointer;
-            padding: 1em;
-            width: 100%;
-            border: none;
-            text-align: left;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease;
-            margin-top: 1em;
-            border-radius: 4px;
-        }
-
-        .accordion:hover {
-            background-color: #ccc;
-        }
-
-        .panel {
-            padding: 0 1em;
-            display: none;
-            background-color: white;
-            overflow: hidden;
-            border-left: 4px solid #4a90e2;
-            margin-bottom: 1em;
-        }
-
-        .fact-box {
-            margin-top: 1em;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 1em;
-            border-radius: 5px;
-        }
-
-        .fact-btn {
-            margin-top: 1em;
-            padding: 0.5em 1em;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        .fact-btn:hover {
-            background-color: #4a90e2;
-        }
-
-        @media (max-width: 768px) {
-            .main-content {
-                flex-direction: column;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Clásico - Statistics & Timeline</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="stats">
-    <header>
-        <h1>El Clásico - Statistics & Timeline</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="Statistics.html">Statistics & Timeline</a>
-            <a href="impact.html">Cultural Impact & Personal Experience</a>
-        </nav>
-    </header>
+  <header>
+    <h1>El Clásico - Statistics & Timeline</h1>
+  </header>
 
-    <main class="main-content">
-        <!-- MAIN CONTENT -->
-        <div class="content">
-            <section>
-                <h2>Key Facts & Statistics</h2>
-                <ul>
-                    <li><strong>Total Official Matches:</strong> 250+</li>
-                    <li><strong>All-Time Top Scorer:</strong> Lionel Messi (26 goals)</li>
-                    <li><strong>Biggest Victory:</strong> Real Madrid 11-1 Barcelona (1943)</li>
-                    <li><strong>Most Wins:</strong> Real Madrid leads, but rivalry remains close!</li>
-                </ul>
-            </section>
+  <nav class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="Statistics.html">Stats</a>
+    <a href="impact.html">Cultural Impact</a>
+  </nav>
 
-            <section>
-                <h2>Interactive Timeline of El Clásico</h2>
+  <main class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar-left">
+      <h3>Match Info</h3>
+      <ul class="nav-links">
+        <li><a href="#key-facts">Key Stats</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#records">Historic Records</a></li>
+        <li><a href="#fun-facts">Fun Facts</a></li>
+      </ul>
+    </aside>
 
-                <button class="accordion">November 19, 2005 - Ronaldinho’s Ovation</button>
-                <div class="panel">
-                    <p>Ronaldinho received a standing ovation from Real Madrid fans after an incredible performance.</p>
-                    <a href="https://www.youtube.com/watch?v=i2kdIbn0Uoc" target="_blank">Watch highlights</a>
-                    <img src="https://jgonza69.github.io/ist263/Project5/Joya.jpeg" alt="Ronaldinho ovation" width="100%">
-                </div>
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <section id="key-facts">
+        <h2>Key Facts & Statistics</h2>
+        <ul>
+          <li><strong>Total Official Matches:</strong> 250+</li>
+          <li><strong>All-Time Top Scorer:</strong> Lionel Messi (26 goals)</li>
+          <li><strong>Biggest Victory:</strong> Real Madrid 11-1 Barcelona (1943)</li>
+          <li><strong>Most Wins:</strong> Real Madrid (slight edge)</li>
+          <li><strong>Most Appearances:</strong> Sergio Ramos (45 matches)</li>
+        </ul>
+      </section>
 
-                <button class="accordion">April 23, 2017 - Messi’s Last-Second Winner</button>
-                <div class="panel">
-                    <p>Messi scored a last-minute goal and held up his shirt to the crowd at the Bernabéu.</p>
-                    <a href="https://www.youtube.com/watch?v=hLVZBN3PH6U" target="_blank">Watch highlights</a>
-                    <img src="https://jgonza69.github.io/ist263/Project5/Messi2.jpeg" alt="Messi celebration" width="100%">
-                </div>
+      <section id="timeline">
+        <h2>Interactive Timeline of El Clásico</h2>
 
-                <button class="accordion">March 2, 2019 - Barcelona's 4th Win in a Row</button>
-                <div class="panel">
-                    <p>Barcelona achieved four consecutive wins at the Bernabéu.</p>
-                    <a href="https://www.youtube.com/watch?v=1wMHHbBg9wo" target="_blank">Watch highlights</a>
-                    <img src="https://jgonza69.github.io/ist263/Project5/Barca.jpeg" alt="Barcelona celebration" width="100%">
-                </div>
-            </section>
+        <button class="accordion">November 19, 2005 - Ronaldinho’s Ovation</button>
+        <div class="panel">
+          <p>Ronaldinho received a standing ovation from Real Madrid fans after a magical performance.</p>
+          <a href="https://www.youtube.com/watch?v=i2kdIbn0Uoc" target="_blank">Watch highlights</a>
+          <img src="https://jgonza69.github.io/ist263/Project5/Joya.jpeg" alt="Ronaldinho ovation" />
         </div>
 
-        <!-- SIDEBAR -->
-        <aside class="sidebar">
-            <h3>Did You Know?</h3>
-            <div class="fact-box" id="factBox">
-                Click the button to reveal a random El Clásico fact!
-            </div>
-            <button class="fact-btn" onclick="showRandomFact()">Show Fact</button>
-        </aside>
-    </main>
+        <button class="accordion">April 23, 2017 - Messi’s Last-Second Winner</button>
+        <div class="panel">
+          <p>Messi scored in stoppage time and held up his jersey to silence the crowd.</p>
+          <a href="https://www.youtube.com/watch?v=hLVZBN3PH6U" target="_blank">Watch highlights</a>
+          <img src="https://jgonza69.github.io/ist263/Project5/Messi2.jpeg" alt="Messi goal" />
+        </div>
 
-    <footer>
-        <p>Project created by Jared Gonzalez</p>
-    </footer>
+        <button class="accordion">March 2, 2019 - Four Wins in a Row</button>
+        <div class="panel">
+          <p>Barcelona secured their fourth consecutive win at the Bernabéu.</p>
+          <a href="https://www.youtube.com/watch?v=1wMHHbBg9wo" target="_blank">Watch highlights</a>
+          <img src="https://jgonza69.github.io/ist263/Project5/Barca.jpeg" alt="Barcelona win" />
+        </div>
+      </section>
 
-    <script>
-        // Accordion toggle
-        const acc = document.getElementsByClassName("accordion");
-        for (let i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                const panel = this.nextElementSibling;
-                panel.style.display = panel.style.display === "block" ? "none" : "block";
-            });
-        }
+      <section id="records">
+        <h2>Historic Match Records</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Record</th>
+              <th>Real Madrid</th>
+              <th>FC Barcelona</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Total Wins</td>
+              <td>100+</td>
+              <td>100+</td>
+            </tr>
+            <tr>
+              <td>Champions League Titles</td>
+              <td>14</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>La Liga Titles</td>
+              <td>35</td>
+              <td>27</td>
+            </tr>
+            <tr>
+              <td>Most Goals in One Clásico</td>
+              <td colspan="2">Real Madrid 11-1 Barcelona (1943)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-        // Random El Clásico facts
-        const facts = [
-            "El Clásico is one of the most watched sporting events worldwide.",
-            "Messi has the most goals in El Clásico history (26).",
-            "Barcelona and Real Madrid have met in over 250 official matches.",
-            "The first El Clásico was played in 1902.",
-            "El Clásico is more than football — it reflects politics and identity.",
-            "In 1943, Madrid beat Barcelona 11-1 in the biggest ever win.",
-            "Sergio Ramos holds the record for most cards in El Clásico history."
-        ];
+      <section id="fun-facts">
+        <h2>Did You Know?</h2>
+        <div class="fact-box" id="factBox">
+          Click the button to reveal a random El Clásico fact!
+        </div>
+        <button class="fact-btn" onclick="showRandomFact()">Show Fact</button>
+      </section>
+    </div>
+  </main>
 
-        function showRandomFact() {
-            const randomIndex = Math.floor(Math.random() * facts.length);
-            document.getElementById("factBox").innerText = facts[randomIndex];
-        }
-    </script>
+  <footer>
+    <p>Project created by Jared Gonzalez</p>
+  </footer>
+
+  <script>
+    // Accordion toggle
+    const acc = document.getElementsByClassName("accordion");
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    }
+
+    // Random facts
+    const facts = [
+      "El Clásico draws over 600 million viewers worldwide.",
+      "Messi has the most goals in Clásico history with 26.",
+      "Sergio Ramos has appeared in more Clásicos than anyone.",
+      "The rivalry dates back to 1902.",
+      "Real Madrid and Barcelona have faced off in over 250 official matches."
+    ];
+
+    function showRandomFact() {
+      const index = Math.floor(Math.random() * facts.length);
+      document.getElementById("factBox").innerText = facts[index];
+    }
+  </script>
 </body>
 </html>
+
 
 
 
